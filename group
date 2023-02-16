@@ -55,7 +55,7 @@ showstringspaces=false
 \begin{center}
 \Huge{{\bf IE332 Assignment \#1}} % <-- replace with correct assignment #
 
-Due: Month Date th, 11:59pm EST % <-- replace with correct due date and time
+Due: Feb 24th, 11:59pm EST % <-- replace with correct due date and time
 \end{center}
 
 \vspace{0.3in}
@@ -67,19 +67,21 @@ Due: Month Date th, 11:59pm EST % <-- replace with correct due date and time
 \noindent {\em ``As a Boilermaker pursuing academic excellence, I pledge to be honest and true in all that I do.
 Accountable together -- we are Purdue.''}
 
+
 \vspace{0.3in}
 
 \begin{table}[h!]
   \begin{center}
     \label{tab:table1}
-    \begin{tabular}{c|cc|c|c}
-      Student & Q1 & Q2 & Overall & DIFF\\
+    \begin{tabular}{c|ccccc|c|c}
+      Student & Q1 & Q2 & Q3 & Q4 & Q5 & Overall & DIFF\\
       \hline
-      A & 50 & 33 & 83 & 17\\
-      B & 50 & 33 & 83 & 17\\
-      C & 0 & 33 & 33 & -33\\
+      Anna Brantley & 10 & 70 & 10 & 10 & 50 & 150 & 25\\
+      Vishal Tijo & 70 & 10 & 10 & 10 & 10 & 110 & -15\\
+      Francisca Cevallos & 10 & 10 & 70 & 10 & 40 & 140 & 15 \\
+      Maude Frappart & 10 & 10 & 10 & 70 & 0 & 100 & -25\\
       \hline
-      St Dev & 29 & 0 & 29 & 29
+      St Dev & 26 & 26 & 26 & 26 & 21 & 21 & 21
     \end{tabular}
   \end{center}
 \end{table}
@@ -149,12 +151,163 @@ Accountable together -- we are Purdue.''}
 
 % Question 2
 \newquestion{2}
+a. 
 
-Example of how to typeset and submit code in Latex:
-\begin{lstlisting}[language=R, frame=single]
-#EXAMPLE R CODE
-x <- c(1,2,3)
-\end{lstlisting}
+Declare int function (int num) 
+	
+	If num < 0: 
+		
+		Return function(–num) 
+	
+	End if 
+
+	If num=0 or num=7: 
+
+		Return 1 
+
+	End if 
+
+	If num < 10: 
+
+		Return 0 
+
+	End if 
+
+	return num /10 - 2 * (num-num/10*10) 
+
+End function 
+
+b. 
+
+Declare int function (int n) 
+
+	If n = 0: 
+
+		Return 1 
+
+	End if 
+
+	Else:  
+	
+		Return n * function(n-1) 
+
+End function 
+
+c. 
+
+Declare int main() 
+
+Declare int arr[] = {25, 11, 7, 75, 56} 
+
+Declare int length = 5 
+
+Declare int max = arr[0] 
+
+	For i = 0 to length–1: 
+
+		If arr[i] > max: 
+
+			Max = arr[i] 
+
+		End if 
+
+	End for 
+
+	Print max 
+
+End main 
+
+
+d. 
+
+Declare int function (int s) 
+
+Declare sum = 0 
+
+Declare n=1 
+
+	For (sum < s): 
+
+		sum = sum + (n *n *n) 
+
+		n = n + 1 
+
+	End for 
+
+	Return sum 
+
+End function 
+
+e. 
+
+Declare struct pair 
+
+Declare int min 
+
+Declare int max 
+
+Declare struct pair function (int arr[0], int n) 
+
+Declare struct pair minmax 
+
+Declare int I 
+
+	If (n=1): 
+
+		minmax.max = arr[0] 
+
+		minmax.min = arr[0] 
+
+		return minmax 
+
+	End if 
+
+	If (arr[0] > arr[1]): 
+
+		minmax.max = arr[0] 
+
+		minmax.min = arr[1] 
+
+	End if 
+
+	Else: 
+
+		minmax.max = arr[1] 
+
+		minmax.min = arr[0] 
+
+	End else 
+
+	For (I = 2; I < n; I++): 
+
+		if (arr[I] > minmax.max): 
+
+			minmax.max = arr[I] 
+
+		else if (arr[I] < minmax.min): 
+
+			minmax.min = arr[I] 
+
+		end if 
+
+	End for 
+
+	Return minmax 
+
+End function 
+
+ 
+
+%Question 3
+\newquestion{3}
+
+%Question 4
+\newquestion{4}
+
+%Question 5
+\newquestion{5}
+
+
 
 
 \end{document}
