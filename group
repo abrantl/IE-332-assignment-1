@@ -526,6 +526,25 @@ LIMIT 0 , 10
 %Question 5
 \newquestion{5}
 
+5a.
+i.)Traditional software must be personally installed, managed, maintained and upgraded. Additionally, the software can be only installed on local computers and servers. On the other hand, SaaS software provides the company with a complete cloud service and the software application is ready to use quickly. Also, many users can access the information at the same time.   
+
+ii.)SaaS application is much more cost efficient as it is typically consumed on a subscription-based model. Therefore, IT maintains and manages the application for the company and those costs are included as monthly or annual payments. 
+
+Scalability; it is easy to add more databases depending on your needs. 
+
+Easy accessibility as everything is stored in a cloud. This allows for multiple users on different machines to access the information.  
+
+5b. 
+Adopting IIOT facilitates companies to improve their productivity and efficiency, as well as providing them multiple economic benefits. A great advantage of adopting IIOT into a company’s process is the accessibility of information. IIOT provides real-time information to everyone who is part of the server, and this allows them to make decisions quickly and accurately as they have the latest data. Consequently, the company increases their competitivity within the market. However, adopting IIOT also has a higher risk of failure as well as major financial loss could occur; adopting this system is expensive and difficult. Additionally, since everything is stored on the internet, there exists a high chance of cyber-attacks.  
+
+5c. 
+
+A virtual machine is a virtual environment that acts like an independent/isolated computer with its own CPU, memory, etc. This operating system can be installed on top of other operating systems in your personal computer’s hardware. The common uses of virtual machines are: 
+
+Abstraction of the operating systems from the hardware: This allows the business to complete backups of the operating system as snapshots. Then, snapshots can be easily translated into another machine.  
+
+Virtual machines can be easily secured, are portable and not dependent on physical server. 
 \newline
 d.
 \newline
