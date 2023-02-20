@@ -253,7 +253,7 @@ mainFuncCallEnd:
 c.
 \begin{lstlisting}
 let string = '"Resulting array = '";
-let string2 = ‘“t”’;
+let string2 = '"t'";
 const arr = [1, 2, 3, 4, 5, 5, 6];
 let r0 = arr.length;
 const arr_rev = [0, 0, 0, 0, 0, 0, 0];
