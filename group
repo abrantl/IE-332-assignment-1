@@ -526,7 +526,48 @@ LIMIT 0 , 10
 %Question 5
 \newquestion{5}
 
-
+\newline
+d.
+\newline
+i.
+Seasonality analysis can dictate the quantity to purchase at a given point as well as the intended sell date for the items. Demand for item types and specific items fluctuates with time, so understanding these trends allows for better inventory management and sales forecasting.
+\newline
+\newline
+ii. 
+A SCM manager has to consider cost, ship time, and environmental impact when deciding on transportation methods. For example, higher cost by way of transportation such as air can help to minimize ship time as well as environmental impact. 
+\newline
+\newline
+iii. 
+The advantage to a capillary storage network is minimizing the lead time, whereas a single, large storage facility can lower costs as well as reduce the complexity of product fulfillment planning. 
+\newline
+\newline
+iv. 
+The demand planning team is responsible for creating accurate demand forecasts as well as coordinating all organizational departments to fit with current sales and production planning. 
+\newline
+\newline
+v. 
+in a supply chain. Explain how each pillar impact profitability.
+The three pillars are service, inventory, and costs. Improving service quality (higher quality products, lower lead times, etc.) increases both general and inventory specific costs. Reducing inventory will increase profitability with a section specific outlook through lower cash investment and inventory expenses, but reduces service quality which can lead to lower demand. Costs must be kept low as it has the most direct impact on profit margins through reduction of expenditure, but solely reducing can have negative impacts on both service quality and inventory investment, leading to lower profitability. 
+\newline
+\newline
+\newline
+e.
+\newline
+i. 
+The original goal of creating the internet via ARPANet was to allow for communication between US military installations during and post nuclear war with Russia.
+\newline
+\newline
+ii. 
+The birthday of the internet was on Oct. 29th, 1969.
+\newline
+\newline
+iii. 
+The internet archive was created in 1996 and is a database of every single webpage possible. It was created to allow for “universal access to all knowledge.”
+\newline
+\newline
+iv. 
+internet that are spam? 
+The origin of the word spam comes from a Monty Python skit where the word is repeated several times, intending to indicate the annoying nature of “spam.” 90\% of the emails sent over the internet are classified as spam.
 
 
 \end{document}
