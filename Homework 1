@@ -521,9 +521,20 @@ LIMIT 0 , 10
 
 
 %Question 4
-\newquestion{4}
 
-%Question 5
+%%\documentclass{article}
+%%\usepackage{graphicx}
+%%\graphicspath{ {./images/} }
+
+%%\begin{document}
+
+
+%%\includegraphics{universe}
+
+%%There's a picture of a galaxy above
+%%\end{document}
+
+Question 5
 \newquestion{5}
 
 5a.
