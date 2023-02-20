@@ -282,6 +282,8 @@ if (r5 < r0) {
 \end{lstlisting}
 % Question 2
 \newquestion{2}
+
+\begin{lstlisting}
 a. 
 
 Declare int function (int num) 
@@ -307,7 +309,9 @@ Declare int function (int num)
 	return num /10 - 2 * (num-num/10*10) 
 
 End function 
+\end{lstlisting}
 
+\begin{lstlisting}
 b. 
 
 Declare int function (int n) 
@@ -323,7 +327,9 @@ Declare int function (int n)
 		Return n * function(n-1) 
 
 End function 
+\end{lstlisting}
 
+\begin{lstlisting}
 c. 
 
 Declare int main() 
@@ -347,8 +353,9 @@ Declare int max = arr[0]
 	Print max 
 
 End main 
+\end{lstlisting}
 
-
+\begin{lstlisting}
 d. 
 
 Declare int function (int s) 
@@ -368,7 +375,9 @@ Declare n=1
 	Return sum 
 
 End function 
+\end{lstlisting}
 
+\begin{lstlisting}
 e. 
 
 Declare struct pair 
@@ -426,6 +435,7 @@ Declare int I
 	Return minmax 
 
 End function 
+\end{lstlisting}
 
  
 
