@@ -29,6 +29,10 @@ upquote=true,
 breaklines=true,
 showstringspaces=false
 }
+\documentclass{article}
+
+\usepackage{graphicx} %package to manage images
+\graphicspath{ {./images/} }
 %  -------------------------------------------- 
 
 %  HEADER AND FOOTER (DO NOT EDIT) ----------------------
@@ -521,20 +525,11 @@ LIMIT 0 , 10
 
 
 %Question 4
+\newquestion{4}
 
-%%\documentclass{article}
-%%\usepackage{graphicx}
-%%\graphicspath{ {./images/} }
+\includegraphics{crowsfoot}
 
-%%\begin{document}
-
-
-%%\includegraphics{universe}
-
-%%There's a picture of a galaxy above
-%%\end{document}
-
-Question 5
+%Question 5
 \newquestion{5}
 \newline
 a.
