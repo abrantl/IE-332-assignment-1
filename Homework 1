@@ -29,8 +29,6 @@ upquote=true,
 breaklines=true,
 showstringspaces=false
 }
-\documentclass{article}
-
 \usepackage{graphicx} %package to manage images
 \graphicspath{ {./images/} }
 %  -------------------------------------------- 
