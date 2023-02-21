@@ -1,4 +1,5 @@
-\documentclass[11pt]{article}
+
+\newquestion{2}\documentclass[11pt]{article}
 
 %  USE PACKAGES  ---------------------- 
 \usepackage[margin=0.7in,vmargin=1in]{geometry}
@@ -283,7 +284,6 @@ if (r5 < r0) {
 }
 \end{lstlisting}
 % Question 2
-\newquestion{2}
 
 \begin{lstlisting}
 a. 
