@@ -444,62 +444,71 @@ End function
 %Question 3
 \newquestion{3}
 
-
-a. 
-
+a) 
+\begin{lstlisting}[language=SQL, frame=single]
 SELECT staff.first_name, staff.last_name, staff.email, city.city, address.district, country.country, address.address 
 FROM staff 
 JOIN store ON staff.staff_id = store.manager_staff_id 
 JOIN address ON store.address_id = address.address_id 
 JOIN city ON address.city_id = city.city_id 
 JOIN country ON city.country_id = country.country_id 
-LIMIT 0 , 10 
+\end{lstlisting}
+\includegraphics[width=\textwidth]{(a).png}
 
-b. 
-
+b) 
+\begin{lstlisting}[language=SQL, frame=single]
 SELECT inventory.inventory_id, inventory.store_id, film.title, film.rating, film.rental_rate, film.replacement_cost 
-FROM inventory, film 
-LIMIT 0 , 10 
+FROM inventory, film
+\end{lstlisting}
+\includegraphics[scale = 0.55]{(b).png}
 
-c. 
 
+c) 
+\begin{lstlisting}[language=SQL, frame=single]
 SELECT store_id, rating, COUNT( rating )  AS number_items 
 FROM inventory, film 
-GROUP  BY store_id, rating 
-ORDER  BY store_id DESC  
-LIMIT 0 , 10
+WHERE film.film_id = inventory.film_id 
+GROUP  BY film.rating, store_id 
+ORDER  BY store_id DESC 
+\end{lstlisting}
+\includegraphics[scale = 0.55]{(c).png}
 
-d. 
 
-SELECT film_category.category_id, store.store_id, SUM( film.replacement_cost ) AS total_replacement_cost, AVG(film.replacement_cost ) AS average_replacement_cost, COUNT( film.film_id )  AS film_count 
-FROM film 
-JOIN film_category ON film.film_id = film_category.film_id 
-JOIN inventory ON film.film_id = inventory.film_id 
-JOIN store ON inventory.store_id = store.store_id 
-GROUP  BY store.store_id, film_category.film_id 
-LIMIT 0 , 10
+d) 
+\begin{lstlisting}[language=SQL, frame=single]
+SELECT category.name, store.store_ID, SUM( film.replacement_cost ) AS total_replacement_cost, AVG( film.replacement_cost ) AS average_replacement_cost, COUNT( film.film_ID ) AS film_count
+FROM film
+JOIN film_category ON film.film_ID = film_category.film_ID
+JOIN category ON film_category.category_ID = category.category_ID
+JOIN inventory ON film.film_ID = inventory.film_ID
+JOIN store ON inventory.store_ID = store.store_ID
+GROUP BY store.store_ID, category.name;
+\end{lstlisting}
+\includegraphics[scale = 0.60]{d.png}
 
-e. 
-
+e)
+\begin{lstlisting}[language=SQL, frame=single]
 SELECT customer.first_name, customer.last_name, COUNT( payment.rental_id ) AS quantity_of_rentals, SUM(payment.amount )  AS total_revenue 
 FROM customer 
 JOIN rental ON customer.customer_id = rental.customer_id 
 JOIN payment ON rental.rental_id = payment.rental_id 
 GROUP  BY customer.customer_id 
 HAVING SUM( payment.amount )  >150 
-ORDER  BY total_revenue DESC  
-LIMIT 0 , 10 
+ORDER  BY total_revenue DESC 
+\end{lstlisting}
+\includegraphics[scale = 0.55]{(e).png}
 
+f)
+\begin{lstlisting}[language=SQL, frame=single]
+SELECT title, rental_rate
+FROM film
+WHERE rental_rate = (SELECT MAX(rental_rate) FROM film)
+GROUP BY title ASC
+\end{lstlisting}
+\includegraphics[scale = 0.50]{f.png}
 
-f. 
-
-SELECT film.title, MAX( rental_rate )  AS highest_rental_price 
-FROM film 
-GROUP  BY film.title 
-LIMIT 0 , 10 
-
-g. 
-
+g)
+\begin{lstlisting}[language=SQL, frame=single]
 SELECT c.first_name, c.last_name, c.email, p.total_spent 
 FROM customer c 
 JOIN ( 
@@ -518,7 +527,10 @@ AND MONTH( payment_date )  =6
 GROUP  BY customer_id )  AS j 
 ) 
 ) AS p ON c.customer_id = p.customer_id 
-LIMIT 0 , 10 
+\end{lstlisting}
+\includegraphics[scale = 0.50]{(g).png}
+
+\end{document}
 
 
 
