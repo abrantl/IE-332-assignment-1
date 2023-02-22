@@ -530,9 +530,6 @@ GROUP  BY customer_id )  AS j
 \end{lstlisting}
 \includegraphics[scale = 0.50]{(g).png}
 
-\end{document}
-
-
 
 %Question 4
 \newquestion{4}
