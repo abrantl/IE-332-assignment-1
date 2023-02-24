@@ -154,10 +154,8 @@ Accountable together -- we are Purdue.''}
 
 a.
 \begin{lstlisting}
-
 <?php
-
-$string = "'The result is: '";
+$string = "The result is: ";
 $value = 0;
 
 main:
@@ -165,11 +163,13 @@ $r9 = readline('');
 if ($r9 <= 0) {
 	goto end;
 }
+
 $r0 = $value;
-++$r0;
-if ($r9 >= 1) {
+$r0 = $r0 + 1;
+if ($r9 = 1) {
 	goto end;
 }
+
 $r2 = $r0;
 $r1 = $r2;
 $r8 = 1;
@@ -178,24 +178,25 @@ loop:
 $r0 = $r1 + $r2;
 $r2 = $r1;
 $r1 = $r0;
-++$r8;
-if ($r9 >= $r8) {
+$r8 = $r8 + 1;
+if ($r9 = $r8) {
 	goto end;
 }
 goto loop;
 
 end:
-$value = $r0
-$r7 = strin1
-print $r7
-print $r0
-
+// Moving word from register to ram instead of ram to register, so $value gets $r0's content
+$value = $r0;
+// No address pointers in PHP, so $r7 gets content of non-existent strin1
+$r7 = $strin1;
+echo $r7;
+echo $r0;
 ?>
 \end{lstlisting}
 \newpage
 b. 
 
-\begin{tabular}{ | p{8cm} | p{7cm}|} 
+\begin{tabular}{ | p{8cm} | p{8cm}|} 
   \hline
 \begin{lstlisting}
 int Ck(int n, int k){
@@ -214,39 +215,42 @@ int main() {
 \end{lstlisting}
 & 
 \begin{lstlisting}
+    b mainStart
 Ck:	
     lw $r0, n
     lw $r1, k
-    .word res 1
-    mov $r4, 1	
-    loop:	
-    .word i 1
-    lw $r2, i
-    add $r2, $r2, 1
-    .word temp n
-    lw $r3, temp
-    sub $r3, $r3, $r1
-    add $r3, $r3, $r2
-    div $r3, $r3, $r2
-    mul $r4, $r4, $r3
-    ble i, k, loop
-    sw $r4, res 
+    // res re-defined to reflect local Ck variable res
+    res: .word, 1
+    lw $r2, res
+    // Something here for $r4	
+loop:	
+    i: .word, 1
+    lw $r3, i
+    // $r4 is temp variable for updating res value
+    lw $r4, $r1
+    sub $r4, $r4, $r1
+    add $r4, $r4, $r3
+    div $r4, $r4, $r3
+    mul $r2, $r2, $r4
+    // Moving res register value to res ram to represent returning res
+    sw $r2, res
     b mainFuncCallEnd
-
 mainStart: 
-    .word n, 5
-    .word k, 2
-    .word res
-    lw $r4, res 
+    n: .word, 5
+    k: .word, 2
+    // res value left empty to reflect C code
+    res: .word, 
     b Ck
 mainFuncCallEnd:
-    .asciiz Result: , string1
+    // Moving res ram content back to register
+    lw $r9, res 
+    string1: .asciiz, "Result: "
     lw $r5, string1
-    .asciiz Result: , string2
+    string2: .asciiz, "\n"
     lw $r6, string2
     print $r5
-    print $r4
-    print $r6 
+    print $r9
+    print $r6
     done
 \end{lstlisting} \\
 \hline
@@ -255,34 +259,39 @@ mainFuncCallEnd:
 \newpage
 c.
 \begin{lstlisting}
-let string = '"Resulting array = '";
-let string2 = '"t'";
+let string = "Resulting array = ";
+let string2 = "\t";
 const arr = [1, 2, 3, 4, 5, 5, 6];
 let r0 = arr.length;
 const arr_rev = [0, 0, 0, 0, 0, 0, 0];
 let r1 = 0;
 let r2 = r0;
-while (r1 < r2) {
-arr_rev[r1] = arr[r2] + 0;
-r1 = r1 + 1;
-r2 = r2 -1;
+
+//Loop
+while (r1 < r0) {
+    // arr_rev[r1] = arr_rev.length as r1 = 0
+    // arr_rev[x] = arr_rev[x-1] as JS starts indexing at 0 whereas the assembly starts at 1
+    arr_rev.length = arr[r2-1] + 0;
+    r1 = r1 + 1;
+    r2 = r2 - 1;
 }
+
 let r3 = string;
 document.write(r3);
 let r4 = string2;
-document.write(string2);
 let r5 = 0;
 
-function printing() {
-	let r5 = arr_rev[r5]
-	document.write(r5);
-document.write(r4);
-++r5;
-if (r5 < r0) {
-	printing();
-}
+// Printing
+while (r5 < r0) {
+    // arr_rev[r5] = arr_rev.length as r5 = 0
+    r5 = arr_rev.length;
+    // Points to address of relevant strings, but printing values to reflect language
+    document.write(r5);
+    document.write(r4);
+    r5 = r5 + 1;
 }
 \end{lstlisting}
+\newpage
 % Question 2
 
 \begin{lstlisting}
@@ -599,6 +608,4 @@ The internet archive was created in 1996 and is a database of every single webpa
 iv. 
 internet that are spam? 
 The origin of the word spam comes from a Monty Python skit where the word is repeated several times, intending to indicate the annoying nature of “spam.” 90\% of the emails sent over the internet are classified as spam.
-
-
 \end{document}
