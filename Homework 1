@@ -243,9 +243,9 @@ mainStart:
 mainFuncCallEnd:
     // Moving res ram content back to register
     lw $r9, res 
-    string1: .asciiz, “Result: “
+    string1: .asciiz, "Result: "
     lw $r5, string1
-    string2: .asciiz, “\n“
+    string2: .asciiz, "\n"
 lw $r6, string2
     print $r5
     print $r9
