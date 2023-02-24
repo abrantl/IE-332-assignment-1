@@ -81,10 +81,10 @@ Accountable together -- we are Purdue.''}
     \begin{tabular}{c|ccccc|c|c}
       Student & Q1 & Q2 & Q3 & Q4 & Q5 & Overall & DIFF\\
       \hline
-      Anna Brantley & 10 & 70 & 10 & 10 & 50 & 150 & 25\\
+      Anna Brantley & 10 & 70 & 10 & 10 & 40 & 150 & 25\\
       Vishal Tijo & 70 & 10 & 10 & 10 & 10 & 110 & -15\\
       Francisca Cevallos & 10 & 10 & 70 & 10 & 40 & 140 & 15 \\
-      Maude Frappart & 10 & 10 & 10 & 70 & 0 & 100 & -25\\
+      Maude Frappart & 10 & 10 & 10 & 70 & 10 & 100 & -25\\
       \hline
       St Dev & 26 & 26 & 26 & 26 & 21 & 21 & 21
     \end{tabular}
@@ -540,31 +540,45 @@ GROUP  BY customer_id )  AS j
 \newline
 a.
 \newline
-i.)Traditional software must be personally installed, managed, maintained and upgraded. Additionally, the software can be only installed on local computers and servers. On the other hand, SaaS software provides the company with a complete cloud service and the software application is ready to use quickly. Also, many users can access the information at the same time.   
+i.)Traditional software must be personally installed, managed, maintained and upgraded. Additionally, the software can only be installed on local computers and servers.
+On the other hand, SaaS software provides the company with a complete cloud service and the software application is ready to use quickly.
+Also, many users can access the information at the same time.   
 \newline
 \newline
-ii.)SaaS application is much more cost efficient as it is typically consumed on a subscription-based model. Therefore, IT maintains and manages the application for the company and those costs are included as monthly or annual payments. Scalability; it is easy to add more databases depending on your needs. Easy accessibility as everything is stored in a cloud. This allows for multiple users on different machines to access the information.  
+ii.)SaaS application is much more cost efficient as it is typically consumed on a subscription-based model. 
+Therefore, the maintainance and management of the application for the company and those costs are included as monthly or annual payments.
+SaaS applications are scalable. It is easy to add more databases depending on your needs and easily accessibility as everything is stored on the cloud. 
+This allows for multiple users on different machines to access the information.  
 \newline
 \newline
 b. 
 \newline
-Adopting IIOT facilitates companies to improve their productivity and efficiency, as well as providing them multiple economic benefits. A great advantage of adopting IIOT into a company’s process is the accessibility of information. IIOT provides real-time information to everyone who is part of the server, and this allows them to make decisions quickly and accurately as they have the latest data. Consequently, the company increases their competitivity within the market. However, adopting IIOT also has a higher risk of failure as well as major financial loss could occur; adopting this system is expensive and difficult. Additionally, since everything is stored on the internet, there exists a high chance of cyber-attacks.  
+Adopting IIOT facilitates companies to improve their productivity and efficiency, as well as providing them multiple economic benefits.
+A great advantage of adopting IIOT into a company’s process is the accessibility of information. 
+IIOT provides real-time information to everyone who is part of the server, and this allows them to make decisions quickly and accurately as they have the latest data.
+Consequently, the company increases their competitivity within the market. 
+However, adopting IIOT also has a higher risk of failure as well as major financial loss could occur; adopting this system is expensive and difficult. 
+Additionally, since everything is stored on the internet, there exists a high chance of cyber-attacks.  
 \newline
 \newline
 c. 
 \newline
-A virtual machine is a virtual environment that acts like an independent/isolated computer with its own CPU, memory, etc. This operating system can be installed on top of other operating systems in your personal computer’s hardware. The common uses of virtual machines are: 
-Abstraction of the operating systems from the hardware: This allows the business to complete backups of the operating system as snapshots. Then, snapshots can be easily translated into another machine.  Virtual machines can be easily secured, are portable and not dependent on physical server. 
+A virtual machine is a virtual environment that acts like an independent or isolated computer with its own CPU, memory, etc. 
+This operating system can be installed on top of other operating systems in your personal computer’s hardware. The common uses of virtual machines are: 
+Abstraction of the operating systems from the hardware: This allows the business to complete backups of the operating system as snapshots. 
+Then, snapshots can be easily translated into another machine.  Virtual machines can be easily secured, are portable and not dependent on physical server. 
 \newline
 \newline
 d.
 \newline
 i.
-Seasonality analysis can dictate the quantity to purchase at a given point as well as the intended sell date for the items. Demand for item types and specific items fluctuates with time, so understanding these trends allows for better inventory management and sales forecasting.
+Seasonality analysis can dictate the quantity to purchase at a given point as well as the intended sell date for the items. 
+Demand for item types and specific items fluctuates with time, so understanding these trends allows for better inventory management and sales forecasting.
 \newline
 \newline
 ii. 
-A SCM manager has to consider cost, ship time, and environmental impact when deciding on transportation methods. For example, higher cost by way of transportation such as air can help to minimize ship time as well as environmental impact. 
+A SCM manager has to consider cost, ship time, and environmental impact when deciding on transportation methods. 
+For example, higher cost by way of transportation such as air can help to minimize ship time as well as environmental impact. 
 \newline
 \newline
 iii. 
@@ -576,8 +590,9 @@ The demand planning team is responsible for creating accurate demand forecasts a
 \newline
 \newline
 v. 
-in a supply chain. Explain how each pillar impact profitability.
-The three pillars are service, inventory, and costs. Improving service quality (higher quality products, lower lead times, etc.) increases both general and inventory specific costs. Reducing inventory will increase profitability with a section specific outlook through lower cash investment and inventory expenses, but reduces service quality which can lead to lower demand. Costs must be kept low as it has the most direct impact on profit margins through reduction of expenditure, but solely reducing can have negative impacts on both service quality and inventory investment, leading to lower profitability. 
+The three pillars are service, inventory, and costs. Improving service quality (higher quality products, lower lead times, etc.) increases both general and inventory specific costs. 
+Reducing inventory will increase profitability with a section specific outlook through lower cash investment and inventory expenses, but reduces service quality which can lead to lower demand. 
+Costs must be kept low as it has the most direct impact on profit margins through reduction of expenditure, but solely reducing can have negative impacts on both service quality and inventory investment, leading to lower profitability. 
 \newline
 \newline
 \newline
@@ -588,7 +603,7 @@ The original goal of creating the internet via ARPANet was to allow for communic
 \newline
 \newline
 ii. 
-The birthday of the internet was on Oct. 29th, 1969.
+The birthday of the internet is on Oct. 29th, 1969 when the first instant message was sent. 
 \newline
 \newline
 iii. 
@@ -596,8 +611,18 @@ The internet archive was created in 1996 and is a database of every single webpa
 \newline
 \newline
 iv. 
-internet that are spam? 
 The origin of the word spam comes from a Monty Python skit where the word is repeated several times, intending to indicate the annoying nature of “spam.” 90\% of the emails sent over the internet are classified as spam.
-
+\newline
+\newline
+v.
+The deep web is 500 times bigger than the surface web.
+\newline
+\newline
+vi.
+It is possible to access the internet from outer space.
+\newline
+\newline
+vii.
+Domain names are allowed to have 63 characters.
 
 \end{document}
