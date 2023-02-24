@@ -81,10 +81,10 @@ Accountable together -- we are Purdue.''}
     \begin{tabular}{c|ccccc|c|c}
       Student & Q1 & Q2 & Q3 & Q4 & Q5 & Overall & DIFF\\
       \hline
-      Anna Brantley & 10 & 70 & 10 & 10 & 40 & 150 & 25\\
+      Anna Brantley & 10 & 70 & 10 & 10 & 40 & 140 & 15\\
       Vishal Tijo & 70 & 10 & 10 & 10 & 10 & 110 & -15\\
       Francisca Cevallos & 10 & 10 & 70 & 10 & 40 & 140 & 15 \\
-      Maude Frappart & 10 & 10 & 10 & 70 & 10 & 100 & -25\\
+      Maude Frappart & 10 & 10 & 10 & 70 & 10 & 110 & -15\\
       \hline
       St Dev & 26 & 26 & 26 & 26 & 21 & 21 & 21
     \end{tabular}
