@@ -1,5 +1,4 @@
-
-\newquestion{2}\documentclass[11pt]{article}
+\documentclass[11pt]{article}
 
 %  USE PACKAGES  ---------------------- 
 \usepackage[margin=0.7in,vmargin=1in]{geometry}
@@ -119,14 +118,14 @@ Accountable together -- we are Purdue.''}
 
     \item[\done] Your solutions were prepared using the \LaTeX template provided in Brightspace. 
     \item[\done] Your submission has a cover sheet as its first page and this checklist as its second page, according to the template provided.
-	 \item All of your solutions (program code, etc.) are included in the submission as requested. % Check this checkbox and the following ones if satisfied <---
-    \item You have not included any screen shots, photos, etc. (plots should be intermediately saved as .png files and then added into your .tex file). % <---
-	 \item All math notation and algorithms (algorithmic environment) are created using appropriate \LaTeX code (no pictures, handwritten solutions, etc.). % <---
-    \item The .pdf is submitted as an individual file and not in a {\tt .zip}.
-    \item You kept the \LaTeX source code in your files until this assignment is graded, in case you are required to show proof of creating your assignment using \LaTeX.  % <---
-    \item If submitting with a partner, your partner is added in the submission section in Gradescope after you upload your file. % <---
-    \item You have correctly matched each question to its page \# in the .pdf submission in the Gradescope section (after you uploaded your file).
-    \item Watch videos on creating pseudocode if you need a refresher or quick reference to the idea. These are good starter videos:    % <---
+	 \item[\done] All of your solutions (program code, etc.) are included in the submission as requested. % Check this checkbox and the following ones if satisfied <---
+    \item[\done] You have not included any screen shots, photos, etc. (plots should be intermediately saved as .png files and then added into your .tex file). % <---
+	 \item[\done] All math notation and algorithms (algorithmic environment) are created using appropriate \LaTeX code (no pictures, handwritten solutions, etc.). % <---
+    \item[\done] The .pdf is submitted as an individual file and not in a {\tt .zip}.
+    \item[\done] You kept the \LaTeX source code in your files until this assignment is graded, in case you are required to show proof of creating your assignment using \LaTeX.  % <---
+    \item[\done] If submitting with a partner, your partner is added in the submission section in Gradescope after you upload your file. % <---
+    \item[\done] You have correctly matched each question to its page \# in the .pdf submission in the Gradescope section (after you uploaded your file).
+    \item[\done] Watch videos on creating pseudocode if you need a refresher or quick reference to the idea. These are good starter videos:    % <---
     
      \HREF{https://www.youtube.com/watch?v=4jLO0vXPktU}{www.youtube.com/watch?v=4jLO0vXPktU} 
     
@@ -154,8 +153,10 @@ Accountable together -- we are Purdue.''}
 
 a.
 \begin{lstlisting}
+
 <?php
-$string = "The result is: ";
+
+$string = "'The result is: '";
 $value = 0;
 
 main:
@@ -163,13 +164,11 @@ $r9 = readline('');
 if ($r9 <= 0) {
 	goto end;
 }
-
 $r0 = $value;
-$r0 = $r0 + 1;
-if ($r9 = 1) {
+++$r0;
+if ($r9 >= 1) {
 	goto end;
 }
-
 $r2 = $r0;
 $r1 = $r2;
 $r8 = 1;
@@ -178,25 +177,24 @@ loop:
 $r0 = $r1 + $r2;
 $r2 = $r1;
 $r1 = $r0;
-$r8 = $r8 + 1;
-if ($r9 = $r8) {
+++$r8;
+if ($r9 >= $r8) {
 	goto end;
 }
 goto loop;
 
 end:
-// Moving word from register to ram instead of ram to register, so $value gets $r0's content
-$value = $r0;
-// No address pointers in PHP, so $r7 gets content of non-existent strin1
-$r7 = $strin1;
-echo $r7;
-echo $r0;
+$value = $r0
+$r7 = strin1
+print $r7
+print $r0
+
 ?>
 \end{lstlisting}
 \newpage
 b. 
 
-\begin{tabular}{ | p{8cm} | p{8cm}|} 
+\begin{tabular}{ | p{8cm} | p{7cm}|} 
   \hline
 \begin{lstlisting}
 int Ck(int n, int k){
@@ -215,42 +213,39 @@ int main() {
 \end{lstlisting}
 & 
 \begin{lstlisting}
-    b mainStart
 Ck:	
     lw $r0, n
     lw $r1, k
-    // res re-defined to reflect local Ck variable res
-    res: .word, 1
-    lw $r2, res
-    // Something here for $r4	
-loop:	
-    i: .word, 1
-    lw $r3, i
-    // $r4 is temp variable for updating res value
-    lw $r4, $r1
-    sub $r4, $r4, $r1
-    add $r4, $r4, $r3
-    div $r4, $r4, $r3
-    mul $r2, $r2, $r4
-    // Moving res register value to res ram to represent returning res
-    sw $r2, res
+    .word res 1
+    mov $r4, 1	
+    loop:	
+    .word i 1
+    lw $r2, i
+    add $r2, $r2, 1
+    .word temp n
+    lw $r3, temp
+    sub $r3, $r3, $r1
+    add $r3, $r3, $r2
+    div $r3, $r3, $r2
+    mul $r4, $r4, $r3
+    ble i, k, loop
+    sw $r4, res 
     b mainFuncCallEnd
+
 mainStart: 
-    n: .word, 5
-    k: .word, 2
-    // res value left empty to reflect C code
-    res: .word, 
+    .word n, 5
+    .word k, 2
+    .word res
+    lw $r4, res 
     b Ck
 mainFuncCallEnd:
-    // Moving res ram content back to register
-    lw $r9, res 
-    string1: .asciiz, "Result: "
+    .asciiz Result: , string1
     lw $r5, string1
-    string2: .asciiz, "\n"
+    .asciiz Result: , string2
     lw $r6, string2
     print $r5
-    print $r9
-    print $r6
+    print $r4
+    print $r6 
     done
 \end{lstlisting} \\
 \hline
@@ -259,41 +254,37 @@ mainFuncCallEnd:
 \newpage
 c.
 \begin{lstlisting}
-let string = "Resulting array = ";
-let string2 = "\t";
+let string = '"Resulting array = '";
+let string2 = '"t'";
 const arr = [1, 2, 3, 4, 5, 5, 6];
 let r0 = arr.length;
 const arr_rev = [0, 0, 0, 0, 0, 0, 0];
 let r1 = 0;
 let r2 = r0;
-
-//Loop
-while (r1 < r0) {
-    // arr_rev[r1] = arr_rev.length as r1 = 0
-    // arr_rev[x] = arr_rev[x-1] as JS starts indexing at 0 whereas the assembly starts at 1
-    arr_rev.length = arr[r2-1] + 0;
-    r1 = r1 + 1;
-    r2 = r2 - 1;
+while (r1 < r2) {
+arr_rev[r1] = arr[r2] + 0;
+r1 = r1 + 1;
+r2 = r2 -1;
 }
-
 let r3 = string;
 document.write(r3);
 let r4 = string2;
+document.write(string2);
 let r5 = 0;
 
-// Printing
-while (r5 < r0) {
-    // arr_rev[r5] = arr_rev.length as r5 = 0
-    r5 = arr_rev.length;
-    // Points to address of relevant strings, but printing values to reflect language
-    document.write(r5);
-    document.write(r4);
-    r5 = r5 + 1;
+function printing() {
+	let r5 = arr_rev[r5]
+	document.write(r5);
+document.write(r4);
+++r5;
+if (r5 < r0) {
+	printing();
+}
 }
 \end{lstlisting}
-\newpage
-% Question 2
 
+% Question 2
+\newquestion{2}
 \begin{lstlisting}
 a. 
 
@@ -471,7 +462,6 @@ FROM inventory, film
 \end{lstlisting}
 \includegraphics[scale = 0.55]{(b).png}
 
-
 c) 
 \begin{lstlisting}[language=SQL, frame=single]
 SELECT store_id, rating, COUNT( rating )  AS number_items 
@@ -494,7 +484,7 @@ JOIN store ON inventory.store_ID = store.store_ID
 GROUP BY store.store_ID, category.name;
 \end{lstlisting}
 \includegraphics[scale = 0.60]{d.png}
-
+\newpage
 e)
 \begin{lstlisting}[language=SQL, frame=single]
 SELECT customer.first_name, customer.last_name, COUNT( payment.rental_id ) AS quantity_of_rentals, SUM(payment.amount )  AS total_revenue 
@@ -523,7 +513,7 @@ FROM customer c
 JOIN ( 
 		SELECT customer_id, SUM( amount )  AS total_spent 
 		FROM payment 
-	WHERE YEAR( payment_date )  =2005 
+            WHERE YEAR( payment_date )  =2005 
 		AND MONTH( payment_date )  =6 
 	GROUP  BY customer_id 
 HAVING SUM( amount )  > (  
@@ -542,11 +532,11 @@ GROUP  BY customer_id )  AS j
 
 %Question 4
 \newquestion{4}
-
 \includegraphics{crowsfoot}
 
 %Question 5
 \newquestion{5}
+
 \newline
 a.
 \newline
@@ -608,4 +598,6 @@ The internet archive was created in 1996 and is a database of every single webpa
 iv. 
 internet that are spam? 
 The origin of the word spam comes from a Monty Python skit where the word is repeated several times, intending to indicate the annoying nature of “spam.” 90\% of the emails sent over the internet are classified as spam.
+
+
 \end{document}
